@@ -2,6 +2,10 @@
 
 JSON schemas (compiled from YAML) for the Alexa JSON Interfaces
 
+Currently included:
+
+- [JSON Interface Reference for Custom Skills](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-interface-reference)
+
 [![Travis build status](http://img.shields.io/travis/rajington/alexa-schemas.svg?style=flat)](https://travis-ci.org/rajington/alexa-schemas)
 [![Code Climate](https://codeclimate.com/github/rajington/alexa-schemas/badges/gpa.svg)](https://codeclimate.com/github/rajington/alexa-schemas)
 [![Test Coverage](https://codeclimate.com/github/rajington/alexa-schemas/badges/coverage.svg)](https://codeclimate.com/github/rajington/alexa-schemas)
