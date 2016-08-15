@@ -8,6 +8,7 @@ const path = require('path');
 const isparta = require('isparta');
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
+const yaml = require('gulp-yaml');
 
 const Instrumenter = isparta.Instrumenter;
 const mochaGlobals = require('./test/setup/.globals');
@@ -50,6 +51,12 @@ function lintGulpfile() {
   return lint('gulpfile.js');
 }
 
+function buildJSON() {
+  return gulp.src('src/**/*.yaml')
+    .pipe(yaml({ space: 2 }))
+    .pipe(gulp.dest(destinationFolder));
+}
+
 function build() {
   return gulp.src(path.join('src', config.entryFileName))
     .pipe(webpackStream({
@@ -66,7 +73,8 @@ function build() {
       externals: {},
       module: {
         loaders: [
-          { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
+          { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
+          { test: /\.yaml$/, include: /src/, loader: 'json!yaml' }
         ]
       },
       devtool: 'source-map'
@@ -184,6 +192,9 @@ gulp.task('lint-gulpfile', lintGulpfile);
 
 // Lint everything
 gulp.task('lint', ['lint-src', 'lint-test', 'lint-gulpfile']);
+
+// Build JSON schema files
+gulp.task('build-json', buildJSON);
 
 // Build two versions of the library
 gulp.task('build', ['lint', 'clean'], build);
