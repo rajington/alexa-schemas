@@ -80,6 +80,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = {
 		"$schema": "http://json-schema.org/schema#",
 		"title": "Alexa Skills Kit Request",
+		"id": "http://rajington.github.io/alexa-schemas/skills-kit/request.json",
 		"description": "The format for the requests sent to your service.\nhttps://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-interface-reference#request-format",
 		"type": "object",
 		"required": [
@@ -335,6 +336,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = {
 		"$schema": "http://json-schema.org/schema#",
 		"title": "Alexa Skills Kit Response",
+		"id": "http://rajington.github.io/alexa-schemas/skills-kit/response.json",
 		"description": "The format of the response that your service returns. The service for an Alexa skill must send its response in JSON format.\nhttps://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-interface-reference#response-format",
 		"type": "object",
 		"required": [
