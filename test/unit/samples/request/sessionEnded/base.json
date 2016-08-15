@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "session": {
+    "new": false,
+    "sessionId": "amzn1.echo-api.session.12345678-1234-4234-8234-1234567890AB",
+    "application": {
+      "applicationId": "amzn1.ask.skill.12345678-1234-4234-8234-9234567890AB"
+    },
+    "user": {
+      "userId": "amzn1.ask.account.ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0"
+    }
+  },
+  "request": {
+    "type": "SessionEndedRequest",
+    "requestId": "amzn1.echo-api.request.12345678-1234-4234-8234-1234567890AB",
+    "timestamp": "2014-11-06T00:00:00Z",
+    "locale": "en-US",
+    "reason": "ERROR"
+  }
+}

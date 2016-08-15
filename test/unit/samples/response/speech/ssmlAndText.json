@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "sessionAttributes": {
+    "key": "value"
+  },
+  "response": {
+    "outputSpeech": {
+      "type": "PlainText",
+      "text": "text",
+      "ssml": "ssml"
+    },
+    "reprompt": {
+      "outputSpeech": {
+        "type": "SSML",
+        "text": "text",
+        "ssml": "ssml"
+      }
+    },
+    "shouldEndSession": false
+  }
+}

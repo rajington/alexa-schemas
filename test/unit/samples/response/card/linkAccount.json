@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "sessionAttributes": {
+    "key": "value"
+  },
+  "response": {
+    "outputSpeech": {
+      "type": "PlainText",
+      "text": "text"
+    },
+    "card": {
+      "type": "LinkAccount"
+    },
+    "shouldEndSession": false
+  }
+}

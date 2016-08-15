@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "sessionAttributes": {
+    "key": "value"
+  },
+  "response": {
+    "outputSpeech": {
+      "type": "PlainText",
+      "text": "text"
+    },
+    "card": {
+      "type": "LinkAccount",
+      "title": "Card Title",
+      "content": "Card Content",
+      "text": "Card Text",
+      "image": {
+        "smallImageUrl": "string",
+        "largeImageUrl": "string"
+      }
+    },
+    "shouldEndSession": false
+  }
+}

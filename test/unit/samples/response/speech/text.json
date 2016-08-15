@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "sessionAttributes": {
+    "key": "value"
+  },
+  "response": {
+    "outputSpeech": {
+      "type": "PlainText",
+      "text": "text"
+    },
+    "reprompt": {
+      "outputSpeech": {
+        "type": "PlainText",
+        "text": "text"
+      }
+    },
+    "shouldEndSession": false
+  }
+}
