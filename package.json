@@ -9,7 +9,9 @@
     "watch": "gulp watch",
     "build": "gulp build",
     "build-json": "gulp build-json",
-    "coverage": "gulp coverage"
+    "coverage": "gulp coverage",
+    "release": "npm version patch;npm publish",
+    "release-json": "git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
