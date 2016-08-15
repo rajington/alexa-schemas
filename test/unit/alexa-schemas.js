@@ -7,6 +7,13 @@ import yaml from 'js-yaml';
 chai.use(chaiJsonSchema);
 chai.tv4.banUnknown = true;
 
+const loadSchema = (folder, name) => {
+  const file = path.join(__dirname, '..', '..', 'src', folder, `${name}.yaml`);
+  const schema = yaml.safeLoad(fs.readFileSync(file));
+  chai.tv4.addSchema(schema);
+  return schema;
+};
+
 const loadSample = (...paths) =>
   JSON.parse(fs.readFileSync(path.join(__dirname, 'samples', ...paths)));
 
@@ -14,8 +21,7 @@ describe('request', () => {
   let schema;
 
   before(() => {
-    schema = yaml.safeLoad(fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'skills-kit',
-      'request.yaml')));
+    schema = loadSchema('skills-kit', 'request');
   });
 
   describe('launch', () => {
@@ -64,8 +70,7 @@ describe('response', () => {
   let schema;
 
   before(() => {
-    schema = yaml.safeLoad(fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'skills-kit',
-      'response.yaml')));
+    schema = loadSchema('skills-kit', 'response');
   });
 
   describe('speech', () => {

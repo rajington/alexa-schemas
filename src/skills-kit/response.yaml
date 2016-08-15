@@ -1,6 +1,6 @@
 $schema: http://json-schema.org/schema#
 title: Alexa Skills Kit Response
-# id: http://rajington.github.io/alexa-skills-kit-schemas/request.json
+id: http://rajington.github.io/alexa-schemas/skills-kit/response.json
 description: >-
   The format of the response that your service returns. The service for an Alexa skill must send its response in JSON format.
 
