@@ -47,6 +47,11 @@ describe('request', () => {
         .to.be.jsonSchema(schema);
     });
 
+    it('should validate with slots', () => {
+      chai.expect(loadSample('request', 'intent', 'withSlots.json'))
+        .to.be.jsonSchema(schema);
+    });
+
     it('should not validate without name', () => {
       chai.expect(loadSample('request', 'intent', 'withoutName.json'))
         .to.not.be.jsonSchema(schema);

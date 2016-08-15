@@ -182,6 +182,31 @@ definitions:
                 title: Name
                 description: A string representing the name of the intent.
                 type: string
+              slots:
+                title: Intent Slots
+                description: >-
+                  A map of key-value pairs that further describes what the user meant based on a
+                  predefined intent schema. The map can be empty.
+                type: object
+                patternProperties:
+                  ^[a-zA-Z0-9]+$:
+                    title: Key
+                    description: A string key that describes the name of the slot and a slot object.
+                    type: object
+                    required:
+                      - name
+                    properties:
+                      name:
+                        title: Slot Name
+                        description: A string that represents the name of the slot.
+                        type: string
+                      value:
+                        title: Slot Value
+                        description: >-
+                          A string that represents the value of the slot. The value is not required.
+                          Note that AMAZON.LITERAL slot values sent to your service are always in
+                          all lower case.
+                        type: string
   SessionEndedRequest:
     allOf:
       - $ref: '#/definitions/BaseRequest'
